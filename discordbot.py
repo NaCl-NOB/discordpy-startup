@@ -6,7 +6,12 @@ import random
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-
+# 起動時に動作する処理
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Game(name='大英帝国'))
+    
+    
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)

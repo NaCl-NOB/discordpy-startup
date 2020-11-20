@@ -16,10 +16,12 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
+   
 @bot.command()   
 async def neko(ctx):
-    await ctx.send('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ''ﾔｰﾃﾞ','ええ加減にせぇや')
+    #await ctx.send('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ''ﾔｰﾃﾞ','ええ加減にせぇや')
+    await ctx.send('ﾔｰ')
+
 
     
 bot.run(token)

@@ -19,8 +19,8 @@ async def ping(ctx):
    
 @bot.command()   
 async def neko(ctx):
-    await ctx.send(random.choice(('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ''ﾔｰﾃﾞ','ええ加減にせぇや')))
-    #await ctx.send('ﾔｰ')
+    #await ctx.send(random.choice(('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ''ﾔｰﾃﾞ','ええ加減にせぇや')))
+    await ctx.send('ﾔｰ')
 
 
     

@@ -38,8 +38,8 @@ async def hoge():
 async def on_message(message):
   # コマンドと同時に使う用のまじない
   # cf. https://github.com/Rapptz/discord.py/issues/186
-await client.wait_until_ready()  
-await client.process_commands(message)
+    await client.wait_until_ready()  
+    await client.process_commands(message)
   # BOTとメッセージの送信者が同じ場合は何もしない
   if client.user == message.author:
     return

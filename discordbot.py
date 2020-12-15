@@ -9,7 +9,7 @@ import discord
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
-client = commands.Bot(command_prefix = '!')
+client = bot
 
 
 @bot.event

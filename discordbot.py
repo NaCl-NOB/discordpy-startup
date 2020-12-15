@@ -30,7 +30,7 @@ async def neko(ctx):
 @client.command()
 async def hoge():
     await message.channel.send("fuga")
-
+    
 
 # ユーザーの発言に対する反応を書く
 
@@ -39,7 +39,7 @@ async def on_message(message):
   # コマンドと同時に使う用のまじない
   # cf. https://github.com/Rapptz/discord.py/issues/186
   await client.process_commands(message)
-
+    ch = client.get_channel()
   # BOTとメッセージの送信者が同じ場合は何もしない
   if client.user == message.author:
     return

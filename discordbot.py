@@ -4,6 +4,7 @@ import random
 import io
 import asyncio
 import os
+import discord
 #import numpy as np
 
 bot = commands.Bot(command_prefix='!')

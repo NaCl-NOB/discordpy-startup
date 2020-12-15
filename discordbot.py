@@ -4,7 +4,7 @@ import random
 import io
 import asyncio
 import os
-#import numpy as np
+import numpy as np
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -27,7 +27,7 @@ async def neko(ctx):
 @bot.command() 
 async def AO-1(ctx):
     await ctx.send(':blue_circle:')
-    """
+    
 #以降はオゾン層さんからの頂き物の改造
 @client.command()
 async def hoge():
@@ -90,7 +90,7 @@ async def on_message(message):
 
 
   # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
-  if True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:
+  elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:
     async with message.channel.typing():
       await asyncio.sleep(0.5)
       say_list = ["呼んだ？", "やぁ。", "やかましい。.wav", "せやな", "やあやあ諸君", "ｱｶﾈﾁｬﾝやで", "なんや？", "みんな大好きｱｶﾈﾁｬﾝやで", "zzz", "......"]
@@ -99,7 +99,7 @@ async def on_message(message):
         # メッセージを選ぶ確率を指定する
         await message.channel.send(random.choices(say_list, k=1, weights=[0.55, 0.3, 0.1, 0.05])[0])
 
-""
+"""
   if True in [i in message.content for i in ["帰"]]:
     async with message.channel.typing():
       await asyncio.sleep(0.5)
@@ -146,7 +146,7 @@ async def on_message(message):
 """
 
 # botの動作に必要なトークンの記述(ここでは環境変数に登録したbotのトークンを呼び出して使用している)
-#client.run(os.environ.get("DISCORD_TOKEN"))
+client.run(os.environ.get("DISCORD_TOKEN"))
 # コード中に直接トークンを記述する場合は、以下のようにすれば動くかと
 # client.run(トークンをここにコピペする)
     

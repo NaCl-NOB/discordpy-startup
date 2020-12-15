@@ -146,7 +146,7 @@ async def on_message(message):
 """
 
 # botの動作に必要なトークンの記述(ここでは環境変数に登録したbotのトークンを呼び出して使用している)
-client.run(os.environ.get("DISCORD_TOKEN"))
+#client.run(os.environ.get("DISCORD_TOKEN"))
 # コード中に直接トークンを記述する場合は、以下のようにすれば動くかと
 # client.run(トークンをここにコピペする)
     

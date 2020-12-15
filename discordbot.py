@@ -47,32 +47,32 @@ async def on_message(message):
       return
 
   # 文の最初が一致した場合にメッセージを返す
-  if message.content.startswith("ステルス"):
-    await message.channel.send("「ス」めー。")
-  if message.content.startswith("平沢"):
-    await message.channel.send("東京の平沢です。")
-  if message.content.startswith("回"):
-    await message.channel.send("今日もタービンは回っている")
-  if message.content.startswith("おはよう"):
-    await message.channel.send("ご機嫌よう")
-  if message.content.startswith("何だかんだ"):
-    await message.channel.send("次は、神田です")
-  if message.content.startswith("asso"):
-    await message.channel.send(":pleading_face:")
-  if message.content.startswith("ｳﾙ"):
-    await message.channel.send("うるさい。")
-  if message.content.startswith("うるさい"):
-    await message.channel.send("やかましい。.wav")
-  if message.content.startswith("コンギョ"):
-    await message.channel.send(":flag_kp: :rocket: :boom:")
-  if message.content.startswith("かに"):
-    await message.channel.send(":crab:")
-  if message.content.startswith("塩"):
-    await message.channel.send(":salt:")
-  if message.content.startswith("ﾊﾞｹ"):
-    await message.channel.send(":japanese_ogre:")
-  if message.content.startswith("java"):
-    await message.channel.send(":coffee:")
+      if message.content.startswith("ステルス"):
+        await message.channel.send("「ス」めー。")
+      if message.content.startswith("平沢"):
+        await message.channel.send("東京の平沢です。")
+      if message.content.startswith("回"):
+        await message.channel.send("今日もタービンは回っている")
+      if message.content.startswith("おはよう"):
+        await message.channel.send("ご機嫌よう")
+      if message.content.startswith("何だかんだ"):
+        await message.channel.send("次は、神田です")
+      if message.content.startswith("asso"):
+        await message.channel.send(":pleading_face:")
+      if message.content.startswith("ｳﾙ"):
+        await message.channel.send("うるさい。")
+      if message.content.startswith("うるさい"):
+        await message.channel.send("やかましい。.wav")
+      if message.content.startswith("コンギョ"):
+        await message.channel.send(":flag_kp: :rocket: :boom:")
+      if message.content.startswith("かに"):
+        await message.channel.send(":crab:")
+      if message.content.startswith("塩"):
+        await message.channel.send(":salt:")
+      if message.content.startswith("ﾊﾞｹ"):
+        await message.channel.send(":japanese_ogre:")
+      if message.content.startswith("java"):
+        await message.channel.send(":coffee:")
     
 
   # 文中の内容が一致した場合にメッセージを返す

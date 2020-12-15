@@ -24,6 +24,7 @@ async def ping(ctx):
 @bot.command()   
 async def neko(ctx):
     await ctx.send(random.choice(('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ええ加減にせぇや','何がおもろいん?','......うちも暇やないんやけど')))
+@bot.command() 
 async def AO-1(ctx):
     await ctx.send(':blue_circle:')
     

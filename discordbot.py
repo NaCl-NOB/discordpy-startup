@@ -8,29 +8,31 @@ import os
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
-    
-    
+
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
+    error_msg = ''.join(
+        traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
 
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-   
-@bot.command()   
-async def neko(ctx):
-    await ctx.send(random.choice(('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ええ加減にせぇや','何がおもろいん?','......うちも暇やないんやけど')))
 
-    
+
+@bot.command()
+async def neko(ctx):
+    await ctx.send(random.choice(('ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ええ加減にせぇや', '何がおもろいん?', '......うちも暇やないんやけど')))
+
+
 #以降はオゾン層さんからの頂き物の改造
 @client.command()
 async def hoge():
     await message.channel.send("fuga")
-    
+
 
 # ユーザーの発言に対する反応を書く
 
@@ -38,7 +40,7 @@ async def hoge():
 async def on_message(message):
   # コマンドと同時に使う用のまじない
   # cf. https://github.com/Rapptz/discord.py/issues/186
-    await client.wait_until_ready()  
+    await client.wait_until_ready()
     await client.process_commands(message)
   # BOTとメッセージの送信者が同じ場合は何もしない
   if client.user == message.author:

@@ -8,7 +8,7 @@ import os
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+client = commands.Bot(command_prefix = BOT_PREFIX)
 
 @bot.event
 async def on_command_error(ctx, error):

@@ -25,7 +25,7 @@ async def ping(ctx):
 async def neko(ctx):
     await ctx.send(random.choice(('ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ﾔｰﾃﾞ','ええ加減にせぇや','何がおもろいん?','......うちも暇やないんやけど')))
 
-    """
+    
 #以降はオゾン層さんからの頂き物の改造
 @client.command()
 async def hoge():
@@ -97,7 +97,7 @@ async def on_message(message):
         # メッセージを選ぶ確率を指定する
         await message.channel.send(random.choices(say_list, k=1, weights=[0.55, 0.3, 0.1, 0.05])[0])
 
-""
+"""
   if True in [i in message.content for i in ["帰"]]:
     async with message.channel.typing():
       await asyncio.sleep(0.5)
@@ -144,7 +144,7 @@ async def on_message(message):
 """
 
 # botの動作に必要なトークンの記述(ここでは環境変数に登録したbotのトークンを呼び出して使用している)
-#client.run(os.environ.get("DISCORD_TOKEN"))
+client.run(os.environ.get("DISCORD_TOKEN"))
 # コード中に直接トークンを記述する場合は、以下のようにすれば動くかと
 # client.run(トークンをここにコピペする)
     

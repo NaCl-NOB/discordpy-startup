@@ -43,8 +43,8 @@ async def on_message(message):
     await client.wait_until_ready()
     await client.process_commands(message)
   # BOTとメッセージの送信者が同じ場合は何もしない
-      if client.user == message.author:
-        return
+    if client.user == message.author:
+      return
 
   # 文の最初が一致した場合にメッセージを返す
   if message.content.startswith("ステルス"):

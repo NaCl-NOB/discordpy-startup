@@ -9,8 +9,8 @@ import discord
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
-#client = commands.Bot(command_prefix = BOT_PREFIX)
-client = discord.Client()
+client = commands.Bot(command_prefix = '!')
+
 
 @bot.event
 async def on_command_error(ctx, error):

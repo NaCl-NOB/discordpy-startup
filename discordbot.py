@@ -5,10 +5,11 @@ import io
 import asyncio
 import os
 #import numpy as np
-BOT_PREFIX = ('!')
+
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
-client = commands.Bot(command_prefix = BOT_PREFIX)
+#client = commands.Bot(command_prefix = BOT_PREFIX)
+client = discord.Client()
 
 @bot.event
 async def on_command_error(ctx, error):

@@ -27,7 +27,7 @@ async def neko(ctx):
 @bot.command() 
 async def AO-1(ctx):
     await ctx.send(':blue_circle:')
-    
+    """
 #以降はオゾン層さんからの頂き物の改造
 @client.command()
 async def hoge():
@@ -99,7 +99,7 @@ async def on_message(message):
         # メッセージを選ぶ確率を指定する
         await message.channel.send(random.choices(say_list, k=1, weights=[0.55, 0.3, 0.1, 0.05])[0])
 
-"""
+""
   if True in [i in message.content for i in ["帰"]]:
     async with message.channel.typing():
       await asyncio.sleep(0.5)

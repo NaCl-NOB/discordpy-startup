@@ -76,28 +76,28 @@ async def on_message(message):
     
 
   # 文中の内容が一致した場合にメッセージを返す
-  if True in [i in message.content for i in ["死ね", "氏ね", "ﾀﾋね", "馬鹿にし", "馬鹿じゃね", "下がってろ"]]:
-    async with message.channel.typing():
-      await asyncio.sleep(0.5)
-      await message.channel.send("なんや喧嘩か？")
+      if True in [i in message.content for i in ["死ね", "氏ね", "ﾀﾋね", "馬鹿にし", "馬鹿じゃね", "下がってろ"]]:
+        async with message.channel.typing():
+          await asyncio.sleep(0.5)
+          await message.channel.send("なんや喧嘩か？")
 
 
-  if True in [i in message.content for i in ["出禁", "dekin", ":dekin:", "出来ん", "Dekin", "できん", "デキン"]]:
-    if message.guild.id == 494052154290601985:
-      await message.add_reaction("<:dekin:556403106045493258>")
-    else:
-      await message.channel.send(":u7981:")
+      if True in [i in message.content for i in ["出禁", "dekin", ":dekin:", "出来ん", "Dekin", "できん", "デキン"]]:
+        if message.guild.id == 494052154290601985:
+          await message.add_reaction("<:dekin:556403106045493258>")
+        else:
+          await message.channel.send(":u7981:")
 
 
-  # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
-  elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:
-    async with message.channel.typing():
-      await asyncio.sleep(0.5)
-      say_list = ["呼んだ？", "やぁ。", "やかましい。.wav", "せやな", "やあやあ諸君", "ｱｶﾈﾁｬﾝやで", "なんや？", "みんな大好きｱｶﾈﾁｬﾝやで", "zzz", "......"]
-      async with message.channel.typing():
-        await asyncio.sleep(0.75)
-        # メッセージを選ぶ確率を指定する
-        await message.channel.send(random.choices(say_list, k=1, weights=[0.55, 0.3, 0.1, 0.05])[0])
+      # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
+      elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:
+        async with message.channel.typing():
+          await asyncio.sleep(0.5)
+          say_list = ["呼んだ？", "やぁ。", "やかましい。.wav", "せやな", "やあやあ諸君", "ｱｶﾈﾁｬﾝやで", "なんや？", "みんな大好きｱｶﾈﾁｬﾝやで", "zzz", "......"]
+          async with message.channel.typing():
+            await asyncio.sleep(0.75)
+            # メッセージを選ぶ確率を指定する
+            await message.channel.send(random.choices(say_list, k=1, weights=[0.55, 0.3, 0.1, 0.05])[0])
 
 """
   if True in [i in message.content for i in ["帰"]]:

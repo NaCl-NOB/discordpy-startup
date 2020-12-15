@@ -1,10 +1,10 @@
 from discord.ext import commands
 import traceback
 import random
-#import io
-#import asyncio
+import io
+import asyncio
 import os
-#import numpy as np
+import numpy as np
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']

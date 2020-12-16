@@ -32,6 +32,9 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+@client.command()
+async def pong(ctx):
+    await ctx.send('ping')
 
 @client.command()
 async def neko(ctx):

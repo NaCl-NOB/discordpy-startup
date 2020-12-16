@@ -75,6 +75,8 @@ async def on_message(message):
       await message.channel.send("うるさい。")
     if message.content.startswith("うるさい"):
       await message.channel.send("やかましい。.wav")
+    if message.content.startswith("!AO-1"):
+      await message.channel.send(":blue_circle:")
       
     # 後でメンションにする
       """

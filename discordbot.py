@@ -15,7 +15,7 @@ client = commands.Bot(command_prefix = BOT_PREFIX)
 #client.run(token)
 
 @client.event
-async def on_ready():
+async def neko(ctx):
         # 起動したらターミナルにログイン通知が表示される
         print('ログインしました')
         await client.change_presence(activity=discord.Game(name='布教活動'))

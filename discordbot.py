@@ -30,7 +30,7 @@ async def on_command_error(ctx, error):
 
 @client.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send('!pong')
 
 @client.command()
 async def pong(ctx):

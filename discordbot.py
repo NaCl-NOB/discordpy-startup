@@ -22,13 +22,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    async def ping(ctx):
-    await ctx.send(
-        say_list = ["呼んだ？", "やぁ。"]
-    async with ctx.send():
-    # メッセージを選ぶ確率を指定する
-        await ctx.send(random.choices(say_list, k=1, weights=[weights=[2.00,0.01]])[0])
-    )
+    await ctx.send('pong')
     
 
 @bot.command()

@@ -13,13 +13,13 @@ client = commands.Bot(command_prefix = BOT_PREFIX)
 #token = os.environ['DISCORD_BOT_TOKEN']
 # Botの起動とDiscordサーバーへの接続
 #client.run(token)
-"""
+
 @client.event
 async def on_ready():
         # 起動したらターミナルにログイン通知が表示される
         print('ログインしました')
         await client.change_presence(activity=discord.Game(name='布教活動'))
-"""
+
 @client.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)

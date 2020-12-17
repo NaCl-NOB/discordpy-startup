@@ -2,6 +2,7 @@ import discord
 import traceback
 import random
 import io
+import re
 import asyncio
 import os
 import numpy as np

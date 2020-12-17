@@ -119,7 +119,8 @@ async def on_message(message):
       else:
         await message.channel.send(":u7981:")
       """
-        """
+        
+      """
     #bakanekoさんのコード
     if message.content.startswith('!chatcount'):
         if message.author.bot:
@@ -140,7 +141,7 @@ async def on_message(message):
                     # メッセージのカウントを増やす
                     count += 1
             await message.channel.send(("{}は、このチャンネルの直前2500回の発言中{}回発言しているみたいやで".format(search_name.name, count)))
-        """
+      """
         
     # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
     elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:

@@ -103,7 +103,7 @@ async def on_message(message):
         await message.channel.send("なんや喧嘩か？")
 
 
-    if True in [i in message.content for i in ["出禁", "dekin", ":dekin:", "出来ん", "Dekin", "できん", "デキン"]]:
+    if True in [i in message.content for i in ["出禁", "dekin", ":dekin:", "出来ん", "Dekin", "できん", "デキン", ":u7981:"]]:
       async with message.channel.typing():
         await asyncio.sleep(0.5)
         await message.channel.send("||~~出禁に出来ん~~||")

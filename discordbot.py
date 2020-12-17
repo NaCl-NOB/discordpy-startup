@@ -119,9 +119,9 @@ async def on_message(message):
       else:
         await message.channel.send(":u7981:")
       """
-        
+         
+      #bakanekoさんのコード    
       """
-    #bakanekoさんのコード
     if message.content.startswith('!chatcount'):
         if message.author.bot:
             return

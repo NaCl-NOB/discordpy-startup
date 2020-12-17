@@ -60,6 +60,8 @@ async def on_message(message):
     if client.user == message.author:
       return
 
+    guild = message.guild
+
   # 文の最初が一致した場合にメッセージを返す
     if message.content.startswith("ステルス"):
       await message.channel.send("「ス」めー。")
@@ -115,7 +117,28 @@ async def on_message(message):
       else:
         await message.channel.send(":u7981:")
       """
-
+    #bakanekoさんのコード
+    if message.content.startswith('!chatcount'):
+        if message.author.bot:
+            return
+        if message.content != "!chatcount":
+            search_name = message.content.split(" ", 1)[1]
+            print(search_name)
+            search_name = search_name
+            search_name = [men for men in message.guild.members if men.name == search_name][0]
+            search_name = message.guild.get_member(search_name.id)
+        else:
+            search_name = message.guild.get_member(message.author.id)
+        
+        async with message.channel.typing():
+            count = 0
+            async for message in message.channel.history(limit=2500):
+                if message.guild.get_member(message.author.id) == search_name:
+                    # メッセージのカウントを増やす
+                    count += 1
+            await message.channel.send(("{}は、このチャンネルの直前2500回の発言中{}回発言しているみたいやで(知らんけど)".format(search_name.name, count)))
+        
+        
     # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
     elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:
       async with message.channel.typing():

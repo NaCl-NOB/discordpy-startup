@@ -1,16 +1,12 @@
-import discord
-import traceback
-import random
-#import hoge
-import io
-import re
 import asyncio
-import pathlib
 import os
-import numpy as np
+import random
+import traceback
+
+import discord
 from discord.ext import commands
 
-BOT_PREFIX = ('!')
+BOT_PREFIX = '!'
 #bot = commands.Bot(command_prefix= BOT_PREFIX)
 client = commands.Bot(command_prefix = BOT_PREFIX)
 #token = os.environ['DISCORD_BOT_TOKEN']
@@ -120,18 +116,18 @@ async def on_message(message):
       else:
         await message.channel.send(":u7981:")
       """
-         
-      #bakanekoさんのコード    
-      """
+
+      
+    #bakanekoさんのコード
     if message.content.startswith('!chatcount'):
         if message.author.bot:
             return
         if message.content != "!chatcount":
-            search_name = message.content.split(" ", 1)[1]
+            search_name: object = message.content.split(" ", 1)[1]
             print(search_name)
             search_name = search_name
             search_name = [men for men in message.guild.members if men.name == search_name][0]
-            search_name = message.guild.get_member(display_name.id)
+            search_name = message.guild.get_member(search_name.id)
         else:
             search_name = message.guild.get_member(message.author.id)
         
@@ -142,7 +138,7 @@ async def on_message(message):
                     # メッセージのカウントを増やす
                     count += 1
             await message.channel.send(("{}は、このチャンネルの直前2500回の発言中{}回発言しているみたいやで".format(search_name.name, count)))
-      """
+        
         
     # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
     elif True in [i in message.content for i in ["ｱｶﾈﾁｬﾝ", "琴葉", "琴葉茜", "あかねちゃん", "茜ちゃん"]]:

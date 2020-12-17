@@ -124,11 +124,11 @@ async def on_message(message):
         if message.author.bot:
             return
         if message.content != "!chatcount":
-            display_name = message.content.split(" ", 1)[1]
+            search_name = message.content.split(" ", 1)[1]
             print(search_name)
-            display_name = display_name
-            display_name = [men for men in message.guild.members if men.name == search_name][0]
-            display_name = message.guild.get_member(search_name.id)
+            search_name = search_name
+            search_name = [men for men in message.guild.members if men.name == search_name][0]
+            search_name = message.guild.get_member(display_name.id)
         else:
             search_name = message.guild.get_member(message.author.id)
         

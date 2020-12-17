@@ -1,7 +1,7 @@
 import discord
 import traceback
 import random
-import hoge
+#import hoge
 import io
 import re
 import asyncio

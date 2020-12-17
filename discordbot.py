@@ -135,10 +135,10 @@ async def on_message(message):
         async with message.channel.typing():
             count = 0
             async for message in message.channel.history(limit=2500):
-                if message.guild.get_member(message.author.id) == search_name:
+                if message.guild.get_member(message.author.id) == display_name:
                     # メッセージのカウントを増やす
                     count += 1
-            await message.channel.send(("{}は、このチャンネルの直前2500回の発言中{}回発言しているみたいやで".format(search_name.display_name, count)))
+            await message.channel.send(("{}は、このチャンネルの直前2500回の発言中{}回発言しているみたいやで".format(display_name.name, count)))
         
         
     # 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す

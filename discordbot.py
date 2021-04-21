@@ -81,22 +81,20 @@ async def on_message(message):
     if message.content.startswith("!AO-1"):
       await message.channel.send(":blue_circle:")
       
-    # 後でメンションにする
-      """
+    # メンションで反応する
+      
     if message.content.startswith("asso"):
-      await message.channel.send(":pleading_face:")
+      await message.add_reaction(":pleading_face:")
     if message.content.startswith("コンギョ"):
-      await message.channel.send(":flag_kp: :rocket: :boom:")
+      await message.add_reaction(":flag_kp: :rocket: :boom:")
     if message.content.startswith("かに"):
-      await message.channel.send(":crab:")
+      await message.add_reaction(":crab:")
     if message.content.startswith("塩"):
-      await message.channel.send(":salt:")
+      await message.add_reaction(":salt:")
     if message.content.startswith("ﾊﾞｹ"):
-      await message.channel.send(":japanese_ogre:")
-      """
-
+      await message.add_reaction(":japanese_ogre:")
     if message.content.startswith("java"):
-      await message.channel.send(":coffee:")
+      await message.add_reaction(":coffee:")
   
 
 # 文中の内容が一致した場合にメッセージを返す

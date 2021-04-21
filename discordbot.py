@@ -34,11 +34,11 @@ async def ping(ctx):
 @client.command()
 async def pong(ctx):
     await ctx.send('ping')
-
+'''
 @client.command()
 async def neko(ctx):
     await ctx.send(random.choice(('ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ﾔｰﾃﾞ', 'ええ加減にせぇや', '何がおもろいん?', '......うちも暇やないんやけど')))
-
+'''
 
 #以降はオゾン層さんからの頂き物の改造
 
@@ -149,5 +149,17 @@ async def on_message(message):
           await asyncio.sleep(0.75)
           # メッセージを選ぶ確率を指定する
           await message.channel.send(random.choices(say_list, k=1, weights=[0.80,1.40,0.50,1.20,1.10,0.70,1.50,0.70,0.30,0.10])[0])
+        
+# 文中の内容が一致した場合に、数種類のメッセージのうち1つをランダムに選んで返す
+    elif True in [i in message.content for i in ["!neko"]]:
+      async with message.channel.typing():
+        await asyncio.sleep(0.5)
+        say_list = ["ﾔｰ", "ﾔｰﾃﾞ", "ええ加減にせぇや", "せやな", "何がおもろいん?", "......うちも暇やないんやけど", "なんや？", "zzz", "......"]
+        async with message.channel.typing():
+          await asyncio.sleep(0.75)
+          # メッセージを選ぶ確率を指定する
+          await message.channel.send(random.choices(say_list, k=1, weights=[2.00,1.80,0.80,0.50,0.40,0.20,0.35,0.10,0.10])[0])
+        
+        
 # botの動作に必要なトークンの記述(ここでは環境変数に登録したbotのトークンを呼び出して使用している)
 client.run(os.environ.get("DISCORD_BOT_TOKEN"))

@@ -89,7 +89,7 @@ async def on_message(message):
     if message.content.startswith("コンギョ"):
       await message.add_reaction(":flag_kp: :rocket: :boom:")
     if message.content.startswith("かに"):
-      await message.add_reaction(:crab:)
+      await Client.add_reaction(':crab:')
     if message.content.startswith("塩"):
       await message.add_reaction(":salt:")
     if message.content.startswith("ﾊﾞｹ"):

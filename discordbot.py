@@ -27,6 +27,9 @@ async def on_command_error(ctx, error):
         traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send('(´・ω・｀)？')
 '''
+#botの場合は無視する
+if message.author.bot:
+        return
 
 @client.command()
 async def ping(ctx):

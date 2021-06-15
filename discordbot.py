@@ -30,7 +30,7 @@ async def on_command_error(ctx, error):
 
 #botの場合は無視する
 if message.author.bot:
-   return
+    return
 
 
 @client.command()
